@@ -1,7 +1,7 @@
 /**
  * Module dependencies.
  */
-var Slack = require('../lib');
+var Slack = require('..');
 var fs = require('fs');
 var path = require('path');
 
