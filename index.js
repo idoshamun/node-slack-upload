@@ -29,7 +29,7 @@ Slack.prototype.uploadFile = function (data, callback) {
 		data = _.omit(data, 'file');
 	}
 	var params = _.reduce(data, function (res, value, key) {
-		return util.format('%s&%s=%s', res, _.underscored(key), value);
+		return util.format('%s&%s=%s', res, _.underscored(key), encodeURIComponent(value));
 	}, '');
 	var endpoint = util.format('%sfiles.upload?token=%s%s', this.api, this.token, params);
 	var req = request.post(endpoint, function (err, response, body) {
