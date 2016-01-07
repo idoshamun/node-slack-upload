@@ -1,6 +1,6 @@
 {
   "name": "node-slack-upload",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A node module for uploading files to slack using multipart or string",
   "repository": {
     "type": "git",
