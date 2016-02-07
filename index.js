@@ -47,7 +47,11 @@ Slack.prototype.uploadFile = function (data, callback) {
 	});
 	if (file) {
 		var form = req.form();
-		form.append('file', file);
+		if (file.value) {
+			form.append('file', file.value, file.options);
+		} else {
+			form.append('file', file);
+		}
 	}
 };
 
