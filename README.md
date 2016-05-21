@@ -39,4 +39,21 @@ slack.uploadFile({
 });
 ```
 
+To upload a file from a string as a post
+```
+slack.uploadFile({
+	content: 'My file contents!',
+	filetype: 'post',
+	title: 'README',
+	initialComment: 'my comment',
+	channels: 'XXXXX'
+}, function(err) {
+	if (err) {
+		console.error(err);
+	}
+	else {
+		console.log('done');
+	}
+});
+```
 For more details please refer [https://api.slack.com/methods/files.upload](https://api.slack.com/methods/files.upload)
