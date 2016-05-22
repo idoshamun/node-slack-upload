@@ -24,7 +24,7 @@ function Slack(token) {
  */
 Slack.prototype.uploadFile = function (data, callback) {
 	var file;
-	if (data.file) {
+	if (data.file && !data.content) {
 		file = data.file;
 		data = _.omit(data, 'file');
 	}
