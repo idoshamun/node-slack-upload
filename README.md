@@ -29,12 +29,12 @@ slack.uploadFile({
 	title: 'README',
 	initialComment: 'my comment',
 	channels: 'XXXXX'
-}, function(err) {
+}, function(err, data) {
 	if (err) {
 		console.error(err);
 	}
 	else {
-		console.log('done');
+		console.log('Uploaded file details: ' + data);
 	}
 });
 ```
@@ -47,12 +47,12 @@ slack.uploadFile({
 	title: 'README',
 	initialComment: 'my comment',
 	channels: 'XXXXX'
-}, function(err) {
+}, function(err, data) {
 	if (err) {
 		console.error(err);
 	}
 	else {
-		console.log('done');
+		console.log('Uploaded file details: ' + data);
 	}
 });
 ```
