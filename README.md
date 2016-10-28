@@ -34,7 +34,7 @@ slack.uploadFile({
 		console.error(err);
 	}
 	else {
-		console.log('Uploaded file details: ' + data);
+		console.log('Uploaded file details: ', data);
 	}
 });
 ```
@@ -52,7 +52,7 @@ slack.uploadFile({
 		console.error(err);
 	}
 	else {
-		console.log('Uploaded file details: ' + data);
+		console.log('Uploaded file details: ', data);
 	}
 });
 ```
