@@ -43,7 +43,7 @@ Slack.prototype.uploadFile = function (data, callback) {
 		if (!body.ok) {
 			return callback(body.error);
 		}
-		callback();
+		callback(null, body);
 	});
 	if (file) {
 		var form = req.form();
