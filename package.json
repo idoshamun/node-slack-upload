@@ -4,7 +4,7 @@
   "description": "A node module for uploading files to slack using multipart or string",
   "repository": {
     "type": "git",
-    "url": "https://github.com/crossorigin/node-slack-upload.git"
+    "url": "https://github.com/elegantmonkeys/node-slack-upload.git"
   },
   "keywords": [
     "slack",
@@ -12,12 +12,14 @@
     "file",
     "post"
   ],
-  "author": "Ido Shamun <idoesh1@gmail.com>",
+  "authors": [
+    "The Elegant Monkeys Ltd."
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/crossorigin/node-slack-upload/issues"
+    "url": "https://github.com/elegantmonkeys/node-slack-upload/issues"
   },
-  "homepage": "https://github.com/crossorigin/node-slack-upload",
+  "homepage": "https://github.com/elegantmonkeys/node-slack-upload",
   "dependencies": {
     "request": "^2.54.0",
     "lodash": "^3.6.0",
