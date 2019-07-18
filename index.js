@@ -1,10 +1,10 @@
 /**
  * Module dependencies.
  */
-var request = require('request');
-var _ = require('lodash');
+const request = require('request');
+const _ = require('lodash');
 _.mixin(require('underscore.string').exports());
-var util = require('util');
+const util = require('util');
 
 /**
  * Create an object with slack configuration
@@ -23,16 +23,16 @@ function Slack(token) {
  * @param callback Callback function (err)
  */
 Slack.prototype.uploadFile = function (data, callback) {
-	var file;
+	let file;
 	if (data.file && !data.content) {
 		file = data.file;
 		data = _.omit(data, 'file');
 	}
-	var params = _.reduce(data, function (res, value, key) {
+	const params = _.reduce(data, function (res, value, key) {
 		return util.format('%s&%s=%s', res, _.underscored(key), encodeURIComponent(value));
 	}, '');
-	var endpoint = util.format('%sfiles.upload?token=%s%s', this.api, this.token, params);
-	var req = request.post(endpoint, function (err, response, body) {
+	const endpoint = util.format('%sfiles.upload?token=%s%s', this.api, this.token, params);
+	const req = request.post(endpoint, function (err, response, body) {
 		if (err) {
 			return callback(err);
 		}
@@ -46,7 +46,7 @@ Slack.prototype.uploadFile = function (data, callback) {
 		callback(null, body);
 	});
 	if (file) {
-		var form = req.form();
+		const form = req.form();
 		if (file.value) {
 			form.append('file', file.value, file.options);
 		} else {
